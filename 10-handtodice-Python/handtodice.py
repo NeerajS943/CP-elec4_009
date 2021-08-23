@@ -5,6 +5,10 @@
 # assert(handToDice(422) == (4,2,2))
 # Hint: You might find // and % useful here, and also getKthDigit().
 
+
+
 def handtodice(hand):
 	# your code goes here
-	pass
+	s = [ int(i) for i in str(hand)]
+	return 	tuple(s)
+
