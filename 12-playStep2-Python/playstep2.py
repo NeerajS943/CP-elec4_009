@@ -35,4 +35,33 @@
 
 def playstep2(hand, dice):
 	# your code goes here
-	pass
+	a = str(hand)
+	b = str(dice)
+	rep = ''
+	for i in a:
+		if(a.count(i)==1):
+			continue
+		else:
+			rep += i
+	if(rep==''):
+		h = max(a)
+		h += b[-2:]
+		h = list(h)
+		h.sort(reverse=True)
+		h="".join(h)
+		return (int(h),int(b[0:-2]))
+	else:
+		ext=''
+		for i in a:
+			if(i in rep):
+				continue
+			else:
+				ext += i
+	
+		r = len(ext)
+		ans = rep+b[-len(ext):]
+		ans = list(ans)
+		ans.sort(reverse=True)
+		ans="".join(ans)
+		return(int(ans),int(b[:-len(ext)]))
+
