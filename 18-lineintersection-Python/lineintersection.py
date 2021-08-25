@@ -6,4 +6,18 @@
 
 def lineintersection(m1, b1, m2, b2):
 	# your code goes here
-	pass
+	if(b1==b2 or m1==m2):
+		return None
+	elif(isMultiple(m1,m2) or isMultiple(m2,m1)):
+		return None
+	else:
+		return (b2-b1)/(m1-m2)
+
+def isMultiple(a,b):
+	if a==0:
+		return True
+	elif b==0:
+		return False
+	elif a%b==0:
+		return True
+	return False
