@@ -26,7 +26,6 @@
 
 class DataColumn: 
     pass
-
 class DataTable:
     pass
 
